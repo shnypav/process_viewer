@@ -1,0 +1,15 @@
+{
+    "configurations": [
+        {
+            "name": "Run my super app",
+            "type": "flask",
+            "workingDir": "$PROJECT_DIR$",
+            "environment": {
+                "FLASK_ENV": "development",
+                "FLASK_DEBUG": "0",
+                "PYTHONPATH": "$PROJECT_DIR$"
+            },
+            "target": "app.py"
+        }
+    ]
+}

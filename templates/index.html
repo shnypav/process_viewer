@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Top 10 Memory Processes</title>
+    </head>
+    <body>
+        <h1>Top 10 Memory Consuming Processes</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>PID</th>
+                    <th>Name</th>
+                    <th>Memory Usage (RSS)</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for process in processes %}
+                <tr>
+                    <td>{{ process.pid }}</td>
+                    <td>{{ process.name }}</td>
+                    <td>{{ process.memory_info.rss / (1024 ** 2)}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </body>
+</html>
